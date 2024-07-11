@@ -2,10 +2,6 @@ a {
     text-decoration: none;
 }
 
-h2 {
-    color: red;
-}
-
 body {
     background-color: dodgerblue;
     box-sizing: border-box;
@@ -68,12 +64,17 @@ h4 {
     color: aqua;
 }
 
+p {
+    text-indent: 40px;
+  }
+
 .searchButton {
     text-align: center;
     margin: auto;
 }
 
-.selector {
+.selector,
+.pageTitle {
     text-align: center;
     margin-bottom: 2.5rem;
     select {
