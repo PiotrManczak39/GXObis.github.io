@@ -16,14 +16,12 @@ textarea {
 }
 
 button {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     border-radius: 10px;
     background-color:rgb(175, 238, 238);
-    a {
-        font-size: .9rem;
-        font-weight: bold;
-        padding: 0rem 1rem 1.5rem 1rem;
-    }
+    max-width: fit-content;
+    margin: auto;
+    margin-top: 1rem;
 }
 
 .banner {
@@ -34,6 +32,13 @@ button {
 
 img {
     width: 100%;
+    max-height: 80%;
+}
+
+input {
+    max-width: 130px;
+    text-align: center;
+    margin: auto;
 }
 
 footer {
@@ -67,6 +72,11 @@ h4 {
 p {
     text-indent: 40px;
   }
+
+.pass {
+    display: flex;
+    flex-direction: column;
+}
 
 .searchButton {
     text-align: center;
