@@ -1,6 +1,11 @@
 const searchBtn = document.getElementById("searchBtn");
 const list = document.querySelector(".list");
 const tailLift = document.querySelector(".tailLift");
+const main = document.querySelector(".main");
+const inputPass = document.getElementById("inputPass");
+const passwordArea = document.querySelector(".pass");
+const password = "Staffline";
+
 
 function createHtml(arr){
     html = "<ul>";
@@ -48,6 +53,18 @@ const Wotton = [
             ];
 
 const masterArray = [Droitwich, Kingsthorpe, Wotton];
+
+main.style.display = "none";
+passBtn.addEventListener("click", () => {
+    let attempt = inputPass.value;
+    if(attempt == password){
+        main.style.display = "block";
+        passwordArea.style.display = "none";
+    } else {
+        alert("Oh dear. That was a wrong password. Try again.");
+        inputPass.value = "";
+    }
+});
 
 
 searchBtn.addEventListener("click", () => {
