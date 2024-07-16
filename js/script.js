@@ -5,7 +5,11 @@ const main = document.querySelector(".main");
 const inputPass = document.getElementById("inputPass");
 const passwordArea = document.querySelector(".pass");
 const password = "Staffline";
+const footer = document.querySelector("footer");
+const getAddress = document.querySelector(".toAddress");
+// const addressDiv = document.querySelector("address");
 
+getAddress.style.display = "none";
 
 function createHtml(arr){
     html = "<ul>";
@@ -38,8 +42,19 @@ const Kingsthorpe = [
                 "Exit at queen Eleanor interchange",
                 "take the 2th exit",
                 "Follow sighns for A508",
-                "Store on the left after Starbucks"
+                "Store on the left after Starbacks"
             ];
+const Oakgrove = [
+                "Oakgrove",
+                "Tail-lift not needed",
+                "At the gate turn left", 
+                "Take the third exit at the roundabout",
+                "Take the first exit at the roundabout",
+                "Take the second exit at the roundabout",
+                "Take first on the right",
+                "Follow the road",
+                "Entry to the yard on the right"
+            ]; 
 const Wotton = [
                 "Wotton",
                 "Tail-lift needed",
@@ -52,7 +67,7 @@ const Wotton = [
                 "Shop on the right"
             ];
 
-const masterArray = [Droitwich, Kingsthorpe, Wotton];
+const masterArray = [Droitwich, Kingsthorpe, Oakgrove, Wotton];
 
 main.style.display = "none";
 passBtn.addEventListener("click", () => {
@@ -67,7 +82,8 @@ passBtn.addEventListener("click", () => {
 });
 
 
-searchBtn.addEventListener("click", () => {
+searchBtn.addEventListener("click", (event) => {
+    event.target.textContent = "Loading...";
     const shop = document.getElementById("stores").value;
     for(let i = 0; i < masterArray.length; i++){
         
@@ -82,7 +98,16 @@ searchBtn.addEventListener("click", () => {
             break;
         }
     }  
-    //searchBtn.style.display = "none"; 
+    if(shop !== ""){
+        event.target.textContent = "Select another Store";
+    } else {
+        event.target.textContent = "Search for location";
+    }
+    if(shop === ""){
+        getAddress.style.display = "none";
+    } else {
+        getAddress.style.display = "block";
+    }
 });
 
 
