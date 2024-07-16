@@ -38,7 +38,7 @@ const Kingsthorpe = [
                 "Exit at queen Eleanor interchange",
                 "take the 2th exit",
                 "Follow sighns for A508",
-                "Store on the left after Starbacks"
+                "Store on the left after Starbucks"
             ];
 const Wotton = [
                 "Wotton",
