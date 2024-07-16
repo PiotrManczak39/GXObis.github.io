@@ -2,6 +2,14 @@ a {
     text-decoration: none;
 }
 
+.address {
+    max-width: 80%;
+    color: white;
+    font-size: 17px;
+    text-align: center;
+    margin: auto;
+}
+
 body {
     background-color: dodgerblue;
     box-sizing: border-box;
@@ -65,6 +73,15 @@ footer {
     text-align: center;
 }
 
+.filler {
+    min-height: 220px;
+}
+
+h2 {
+    color: white;
+    text-align: center;
+}
+
 h4 {
     color: aqua;
 }
@@ -91,6 +108,14 @@ p {
         border-radius: 10px;
         padding: .5rem;
     }
+}
+
+.tailLift,
+.tempInfo,
+.text {
+    max-width: 80%;
+    text-align: center;
+    margin: auto;
 }
 
 ul {
